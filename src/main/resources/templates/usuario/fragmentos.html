@@ -3,7 +3,13 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>TechShop</title>
+        <title>Botero Beauty</title>
+        <style>
+            .btn-purple {
+                background-color: purple;
+                color: white;
+            }
+        </style> 
     </head>
     <body>
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
@@ -13,7 +19,7 @@
                     <div class="col-md-3">   
                         <button 
                             type="button" 
-                            class="btn btn-primary btn-block" 
+                            class="btn btn-purple" style="background-color: #D8BFD8; color: black;" 
                             data-bs-toggle="modal" 
                             data-bs-target="#agregarUsuario">
                             <i class="fas fa-plus"></i> [[#{usuario.agregar}]]
@@ -75,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-primary" type="submit">Guardar</button>
+                                <button class="btn btn-purple" style="background-color: #D8BFD8; color: black;" type="submit">Guardar</button>
                             </div>
                         </form>
                     </div>

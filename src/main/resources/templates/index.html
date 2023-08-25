@@ -2,12 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>TechShop</title>
+        <title>Botero Beauty</title>
+        <style>
+            /* Estilo para el párrafo con fondo lila */
+            .purple-background {
+                background-color: #800080;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            
+            /* Estilo para las líneas de porcentaje moradas */
+            .percentage-bar {
+                background-color: #800080;
+                height: 30px;
+                margin: 10px 0;
+                position: relative;
+            }
+            
+            .team-info {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+            
+            .parameter {
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"></header>
+        
+        <!-- Sección "Quiénes Somos" -->
+        <section id="quienes-somos" class="py-5 centered-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>¿Quiénes Somos?</h2>
+                        <p>Conoce un poco más sobre lo que hacemos...</p>
+                        <p class="purple-background">Boterobeauty es un portal creado para la atención de nuestra querida clientela, quienes buscan facilidad en la adquisición de sus productos de belleza en estos días de acelere o confinamiento. Es por ello que hemos colocado en esta página todo nuestro amor y dedicación para hacer la experiencia de compra más agradable y sencilla. Nuestra experiencia de más de 20 años nos ayuda a conocer el mercado, sus tendencias y la variedad que solicitan nuestros clientes.</p>
+                        <p class="team-info">Somos un equipo multifuncional enfocado en la belleza del cliente. Contamos con parámetros que certifican nuestra excelencia:</p>
+                        <ul class="team-info">
+                            <li><span class="parameter">98%</span> de calidad en nuestros productos</li>
+                            <li><span class="parameter">100%</span> de atención al cliente</li>
+                            <li><span class="parameter">92%</span> en surtido de referencias</li>
+                            <li>Rapidez en responder en no más de <span class="parameter">24 horas</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="percentage-bar" style="width: 98%;"></div>
+                        <div class="percentage-bar" style="width: 100%;"></div>
+                        <div class="percentage-bar" style="width: 92%;"></div>
+                        <div class="percentage-bar" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Fragmento del listado de productos (código que proporcionaste) -->
         <section th:replace="~{carrito/fragmentos :: listadoProductos}"></section>
+        
         <footer th:replace="~{layout/plantilla :: footer}"></footer>
-
     </body>
 </html>
